@@ -3,7 +3,7 @@ cask "devback" do
   name "devback"
   desc "CLI tool for Git repository backups"
   homepage "https://github.com/arumata/devback"
-  version "0.9.3"
+  version "0.10.0"
 
   livecheck do
     skip "Auto-generated on release."
@@ -15,12 +15,12 @@ cask "devback" do
     on_intel do
       url "https://github.com/arumata/devback/releases/download/v#{version}/devback_#{version}_darwin_amd64.tar.gz",
         verified: "github.com/arumata/devback"
-      sha256 "49fb0fd7333b53dc89325a8bb18ed6e843d9a6f56be52e2fd0bc94336760a2ce"
+      sha256 "6dd76ff32280e9843ecd1abbc82433c46c99e532a27948079e64dfbd6c80ffe5"
     end
     on_arm do
       url "https://github.com/arumata/devback/releases/download/v#{version}/devback_#{version}_darwin_arm64.tar.gz",
         verified: "github.com/arumata/devback"
-      sha256 "15ce69e70c0669dfd4a743b3dd8f4395d77c89dcff2f1ab00fcde6086deaac43"
+      sha256 "f7b39979e050db7a687daeede3a9cd6956e5d65f241478f77ae362b15ad97460"
     end
   end
 
@@ -28,12 +28,12 @@ cask "devback" do
     on_intel do
       url "https://github.com/arumata/devback/releases/download/v#{version}/devback_#{version}_linux_amd64.tar.gz",
         verified: "github.com/arumata/devback"
-      sha256 "1053b9fb48e8465f03d8044b9965526a93e36de3a902a3a55e9a585c377c274d"
+      sha256 "c1649cf30992657fdd30d64e5f9d575371007c9b9cb6a9d43a6a70489faf001d"
     end
     on_arm do
       url "https://github.com/arumata/devback/releases/download/v#{version}/devback_#{version}_linux_arm64.tar.gz",
         verified: "github.com/arumata/devback"
-      sha256 "4c68f2066cb94a15047d4bb084429f43cdbfab7095052f2a2544616856e544c1"
+      sha256 "067c468ef15b42b43ed4813571dd1241d3b516f5f6aa2ffc2121cfa2004633e4"
     end
   end
 
