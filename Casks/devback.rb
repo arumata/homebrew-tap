@@ -3,7 +3,7 @@ cask "devback" do
   name "devback"
   desc "CLI tool for Git repository backups"
   homepage "https://github.com/arumata/devback"
-  version "0.10.0"
+  version "0.10.1"
 
   livecheck do
     skip "Auto-generated on release."
@@ -15,12 +15,12 @@ cask "devback" do
     on_intel do
       url "https://github.com/arumata/devback/releases/download/v#{version}/devback_#{version}_darwin_amd64.tar.gz",
         verified: "github.com/arumata/devback"
-      sha256 "6dd76ff32280e9843ecd1abbc82433c46c99e532a27948079e64dfbd6c80ffe5"
+      sha256 "3664d0d3c301492a927e364911a1d3bdb17edfc6e0a8519575ffa2c646e5d385"
     end
     on_arm do
       url "https://github.com/arumata/devback/releases/download/v#{version}/devback_#{version}_darwin_arm64.tar.gz",
         verified: "github.com/arumata/devback"
-      sha256 "f7b39979e050db7a687daeede3a9cd6956e5d65f241478f77ae362b15ad97460"
+      sha256 "a1237edb97adfe8d78271e1b6c28e0471503ad6764278c19e765ac088f865380"
     end
   end
 
@@ -28,12 +28,12 @@ cask "devback" do
     on_intel do
       url "https://github.com/arumata/devback/releases/download/v#{version}/devback_#{version}_linux_amd64.tar.gz",
         verified: "github.com/arumata/devback"
-      sha256 "c1649cf30992657fdd30d64e5f9d575371007c9b9cb6a9d43a6a70489faf001d"
+      sha256 "fef5428d487dc1a153c87c1abe0294b212c29cf0cef83572cb71fa8f390e3f43"
     end
     on_arm do
       url "https://github.com/arumata/devback/releases/download/v#{version}/devback_#{version}_linux_arm64.tar.gz",
         verified: "github.com/arumata/devback"
-      sha256 "067c468ef15b42b43ed4813571dd1241d3b516f5f6aa2ffc2121cfa2004633e4"
+      sha256 "03b53592fc5512028463a7dff55141056052e77c10c66789c6c4d6a172753a52"
     end
   end
 
@@ -41,6 +41,7 @@ cask "devback" do
     if OS.mac?
       system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/devback"]
     end
+    system_command "#{staged_path}/devback", args: ["init", "--templates-only", "--force"]
   end
 
   # No zap stanza required
